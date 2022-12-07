@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Website</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="#pagrindinis" id="navbar__logo"> <img src="{% static 'logo_nav.png' %}"></a>
+        <div class="navbar__toggle" id="mobile-menu">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+         </div>
+         <ul class="navbar__menu">
+           <li class="navbar__item">
+           <a href="#" class="navbar__links" id="home-page">Pagrindinis</a>
+           </li>
+           <li class="navbar__item">
+           <a href="#apie-mus" class="navbar__links" id="about-page">Apie mus</a>
+           </li>
+           <li class="navbar__item">
+           <a href="#paslaugos" class="navbar__links" id="services-page">Paslaugos</a>
+           <li class="navbar__btn">
+           <a href="#susisiekite" class="button" id="signup">Susisiekite!</a>
+           </li>
+         </ul>
+      </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="pagrindinis">
+    <div class="hero__container">
+      <h1 class="hero__heading"> Skaitmeninės rinkodaros <span>sprendimai</span> </h1>
+      <p class="hero__description">Pakelsime Jūsų verslą į <span><b>aukštesnį lygį</b></span></p>
+      <button class="main__btn" id="first_button"> <a href="#">Explore</a></button>
+    </div>
+  </div>
+
+    <!-- About Section -->
+    <div class="main" id="apie-mus">
+      <div class="main__container">
+        <div class="main__img--container">
+          <div class="main__img--card"> <i class="fas fa-layer-group"></i></div>
+        </div>
+        <div class="main__content">
+          <h1>Kas yra Qmarketing?</h1>
+          <h2>Padėsime pasiekti geriausių rezultatų.</h2>
+          <p>Mes esame skaitmeninės rinkodaros agentūra, kuri Jums padės įgyvendinti rinkodaros ir reklamos idėjas.</p>
+          <!-- <button class="main__btn" id="second_button"> <a href="#">Schedule a Call</a></button> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services" id="paslaugos">
+      <h1>Mūsų paslaugos</h1>
+      <div class="services__wrapper">
+        <div class="services__card">
+          <h2>Socialinių tinklų turinys ir valdymas</h2>
+          <h3><i class="fa-solid fa-thumbs-up"></i></h3>
+          <p>Jūsų verslui pritaikyta socialinių tinklų strategija</p>
+          <!-- <div class="services__btn"> <button>Get Started</button></div> -->
+        </div>
+        <div class="services__card">
+          <h2>Socialinių tinklų reklama</h2>
+          <h3><i class="fa-sharp fa-solid fa-chart-simple"></i></h3>
+          <p>Pritaikysime Jums efektyviausią reklamos kampaniją</p>
+          <!-- <div class="services__btn"> <button>Get Started</button></div> -->
+        </div>
+        <div class="services__card">
+          <h2>Svetainių kūrimas ir priežiūra</h2>
+          <h3><i class="fa-sharp fa-solid fa-clone"></i></h3>
+          <p>Sukursime modernią ir stilingą svetainę</p>
+          <!-- <div class="services__btn"> <button>Get Started</button></div> -->
+        </div>
+        <div class="services__card">
+          <h2>SEO</h2>
+          <h3><i class="fa-sharp fa-solid fa-gears"></i></h3>
+          <p>Tapkite labiau pastebimi Google paieškose</p>
+          <!-- <div class="services__btn"> <button>Get Started</button></div> -->
+        </div>
+      </div>
+    </div>
+<div class="main" id="susisiekite">
+      <div class="main__container">
+        <div class="main__content">
+          <h1>Turite klausimų?</h1>
+          <h2>Parašykite mums!</h2>
+<div class="container">
+    <div class="contact-box">
+          <div class="right">
+    <form method="POST" action=".">
+        {% csrf_token %}
+        <div class="form-group">
+        {{ form.as_p }}
+
+        </div>
+        <button class="btn">Siųsti</button>
+    </form>
+          </div>
+    </div>
+     </div>
+        </div>
+<div class="main__img--container">
+          <div class="main__img--card" id="card-2"> <i class="fas fa-users"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Kontaktai</h2>
+            <p>El. paštas: byrke123@gmail.com </p> <p>Telefonas: +37060152288 </p>
+          </div>
+
+        </div>
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <p id="footer__logo"> <img src="{% static 'logo.png' %}"> </p>
+          </div>
+          <div class="social__icons">
+            <a href="/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="/" class="social__icon--link"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://kit.fontawesome.com/028a8bf752.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
